@@ -14,17 +14,16 @@ This program requires the following to be installed:
 - Make
   
 To install dependencies, you can run:
-''' bash
-make install
+`make install`
 
 ---
 
 # how to run it:
 this can be done :
-''' 
+```
 make run_all
 or 
-'''
+```
 make runscript
 Both these commands will produce a CSV file which can then be opened in Excel or any spreadsheet viewer. An example can be found under output. 
 
