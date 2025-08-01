@@ -12,7 +12,7 @@ make install
 
 how to run it:
 this can be done :
-make run_all
+'''make run_all'''
 or 
 make runscript
 Both these commands will produce a CSV file which can then be opened in Excel or any spreadsheet viewer. An example can be found under output. 
