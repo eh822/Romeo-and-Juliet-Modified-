@@ -2,7 +2,7 @@
 # Romeo-and-Juliet-Modified-
 
 # description:
-this program will take the seperate lines of the text file, which is an AI generated parody of Romeo and Juliet with cows and will give each line a corresponding, unique hash value. 
+this program will take the seperate lines of the text file, which is an AI generated parody of *Romeo and Juliet* with cows and will give each line a corresponding, unique hash value. 
 The resulting data (original line + hash) is saved into a CSV file, which you can open in Excel or any spreadsheet program.
 
 ---
