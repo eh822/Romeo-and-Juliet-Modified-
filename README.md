@@ -14,7 +14,9 @@ This program requires the following to be installed:
 - Make
   
 To install dependencies, you can run:
-```make install```
+```
+make install
+```
 
 ---
 
