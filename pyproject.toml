@@ -9,7 +9,9 @@ license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.11,<4.0"
 dependencies = [
-    "cowdao-cowpy (>=1.0.0,<2.0.0)"
+    "cowdao-cowpy (>=1.0.0,<2.0.0)",
+    "click (>=8.2.1,<9.0.0)",
+    "rich-click (>=1.8.9,<2.0.0)"
 ]
 
 [build-system]
@@ -18,4 +20,12 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.12.7"
+
+[tool.poetry.scripts]
+moo = "main.main:cli"
+
+[[tool.poetry.packages]]
+include = "main"
+
+
 
