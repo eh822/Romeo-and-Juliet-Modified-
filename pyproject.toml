@@ -7,8 +7,9 @@ authors = [
 ]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<4.0"
 dependencies = [
+    "cowdao-cowpy (>=1.0.0,<2.0.0)"
 ]
 
 [build-system]
