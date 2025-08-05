@@ -1,15 +1,15 @@
 
 run_all:
-	poetry run python3 romeomodified.py
+	poetry run moo
 
 install:
 	poetry install
 
 format:
-	poetry run ruff format romeomodified.py
+	poetry run ruff format main/ tests/
 
 lint:
-	poetry run ruff check romeomodified.py
+	poetry run ruff check main/ tests/
 
 
 all: format lint
