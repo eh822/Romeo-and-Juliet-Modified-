@@ -3,7 +3,7 @@ run_all:
 	poetry run python3 romeomodified.py
 
 install:
-	poetry install --no-root
+	poetry install
 
 format:
 	poetry run ruff format romeomodified.py
