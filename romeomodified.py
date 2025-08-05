@@ -1,6 +1,7 @@
 """
 Simple example of building and posting app data to the endpoints.
 """
+
 import os
 import asyncio
 import csv
@@ -29,7 +30,10 @@ def build_and_post_app_data(
     partner_fee: PartnerFee,
 ) -> str:
     create_app_data = generate_app_data(
-        app_code=app_code, graffiti=graffiti, referrer_address=referrer_address, partner_fee=partner_fee
+        app_code=app_code,
+        graffiti=graffiti,
+        referrer_address=referrer_address,
+        partner_fee=partner_fee,
     )
     if not app_data_exists(orderbook, create_app_data.app_data_hash):
         print("App data does not exist, uploading...")
@@ -52,13 +56,17 @@ def main(chunk):
         bps=1, recipient=partner_fee_address
     )  # Example fee structure
     app_data_hash = build_and_post_app_data(
-        order_book_api, chunk, app_code, referrer_address, partner_fee, 
+        order_book_api,
+        chunk,
+        app_code,
+        referrer_address,
+        partner_fee,
     )
     return app_data_hash
 
 
-#if __name__ == "__main__":
-#    linenum = 0 
+# if __name__ == "__main__":
+#    linenum = 0
 #    with open("Moomeo.txt", "r") as file:
 #        for line in file:
 #           if line.strip() != "":
@@ -70,7 +78,6 @@ def main(chunk):
 if __name__ == "__main__":
     lines = []
 
-  
     with open("Moomeo.txt", "r") as file:
         for line in file:
             if line.strip() != "":
@@ -78,15 +85,11 @@ if __name__ == "__main__":
                 print("Line from Moomeo.txt:", line.strip())
 
     output_path = os.path.abspath("output.csv")
-    with open(output_path, "w", newline='') as csvfile:
+    with open(output_path, "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(["Line", "Hash"])  
+        writer.writerow(["Line", "Hash"])
 
-        
         for i, line in enumerate(lines):
-            hash_value = main(i) 
+            hash_value = main(i)
             print("Hash", i, "is:", hash_value)
             writer.writerow([line, hash_value])
-
-    
- 
